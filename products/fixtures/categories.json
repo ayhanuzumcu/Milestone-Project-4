@@ -1,0 +1,14 @@
+[{"pk": 1, "model": "products.category", "fields": {"name": "fish", "friendly_name": "Freshly Cooked Fish"}}, 
+{"pk": 2, "model": "products.category", "fields": {"name": "chips", "friendly_name": "Freshly Cooked Chips"}}, 
+{"pk": 3, "model": "products.category", "fields": {"name": "pies", "friendly_name": "Pies"}}, 
+{"pk": 4, "model": "products.category", "fields": {"name": "sausages", "friendly_name": "Sausages"}}, 
+{"pk": 5, "model": "products.category", "fields": {"name": "burgers", "friendly_name": "Burgers"}}, 
+{"pk": 6, "model": "products.category", "fields": {"name": "burgermeals", "friendly_name": "Burger Meals"}}, 
+{"pk": 7, "model": "products.category", "fields": {"name": "sides", "friendly_name": "Side Orders"}}, 
+{"pk": 8, "model": "products.category", "fields": {"name": "desserts", "friendly_name": "Desserts"}}, 
+{"pk": 9, "model": "products.category", "fields": {"name": "drinks", "friendly_name": "Drinks"}},
+{"pk": 10, "model": "products.category", "fields": {"name": "fishmeals", "friendly_name": "Fish & Chips Meals"}},
+{"pk": 11, "model": "products.category", "fields": {"name": "burgermeals", "friendly_name": "Burger Meals"}},
+{"pk": 12, "model": "products.category", "fields": {"name": "kidsmeals", "friendly_name": "Kids Meals"}}]
+
+
