@@ -31,8 +31,8 @@ body {
 }
 
 .order-now-button {
-    background: #ffc107;
-    color: rgb(0, 0, 0);
+    background: #000000;
+    color:  #ffc107;
     min-width: 260px;
 }
 
@@ -47,8 +47,8 @@ body {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: rgb(255, 0, 0);
-    color: white;
+    background:  #ffc107;
+    color: rgb(0, 0, 0);
 }
 
 .text-black {
@@ -71,6 +71,11 @@ body {
 	position: fixed;
 	background: white;
 	z-index: -1;
+}
+
+a.category-badge > span.badge:hover {
+    background: #212529 !important;
+    color: #ffc107 !important;
 }
 
 /* -------------------------------- Media Queries */
