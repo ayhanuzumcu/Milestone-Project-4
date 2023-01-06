@@ -6,11 +6,11 @@
                 Fish & Chips
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="fish-link">
-                <a href="" class="dropdown-item">Freshly Cooked Fish</a>
-                <a href="" class="dropdown-item">Freshly Cooked Chips</a>
-                <a href="" class="dropdown-item">Pies</a>
-                <a href="" class="dropdown-item">Sausages</a>
-                <a href="" class="dropdown-item">All Fish and Chips Menu</a>
+                <a href="{% url 'products' %}?category=fish" class="dropdown-item">Freshly Cooked Fish</a>
+                <a href="{% url 'products' %}?category=chips" class="dropdown-item">Freshly Cooked Chips</a>
+                <a href="{% url 'products' %}?category=pies" class="dropdown-item">Pies</a>
+                <a href="{% url 'products' %}?category=sausages" class="dropdown-item">Sausages</a>
+                <a href="{% url 'products' %}?category=fish,chips,pies,sausages" class="dropdown-item">All Fish and Chips Menu</a>
             </div>
         </li>
 
@@ -19,9 +19,9 @@
                 Burgers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="burger-link">
-                <a href="" class="dropdown-item">Burgers</a>
-                <a href="" class="dropdown-item">Burger Meals</a>
-                <a href="" class="dropdown-item">All Burgers Menu</a>
+                <a href="{% url 'products' %}?category=burgers" class="dropdown-item">Burgers</a>
+                <a href="{% url 'products' %}?category=burgermeals" class="dropdown-item">Burger Meals</a>
+                <a href="{% url 'products' %}?category=burgers,burgermeals" class="dropdown-item">All Burgers Menu</a>
             </div>
         </li>
 
@@ -30,10 +30,10 @@
                 Others
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="others-link">
-                <a href="" class="dropdown-item">Side Orders</a>
-                <a href="" class="dropdown-item">Desserts</a>
-                <a href="" class="dropdown-item">Drinks</a>
-                <a href="" class="dropdown-item">All Others Menu</a>
+                <a href="{% url 'products' %}?category=sides" class="dropdown-item">Side Orders</a>
+                <a href="{% url 'products' %}?category=desserts" class="dropdown-item">Desserts</a>
+                <a href="{% url 'products' %}?category=drinks" class="dropdown-item">Drinks</a>
+                <a href="{% url 'products' %}?category=sides,desserts,drinks" class="dropdown-item">All Others Menu</a>
             </div>
         </li>
 
@@ -42,10 +42,10 @@
                 Meal Deals
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="meals-link">
-                <a href="" class="dropdown-item">Fish and Chips Meals</a>
-                <a href="" class="dropdown-item">Burger Meals</a>
-                <a href="" class="dropdown-item">Kids Meals</a>
-                <a href="" class="dropdown-item">All Meal Deals</a>
+                <a href="{% url 'products' %}?category=fishmeals" class="dropdown-item">Fish and Chips Meals</a>
+                <a href="{% url 'products' %}?category=burgermeals" class="dropdown-item">Burger Meals</a>
+                <a href="{% url 'products' %}?category=kidsmeals" class="dropdown-item">Kids Meals</a>
+                <a href="{% url 'products' %}?category=fishmeals,burgermeals,kidsmeals" class="dropdown-item">All Meal Deals</a>
             </div>
         </li>
 
