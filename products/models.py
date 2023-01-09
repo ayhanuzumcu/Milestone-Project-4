@@ -24,6 +24,7 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=6, decimal_places=2)
     rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
+    free_drink = models.BooleanField(default=False, null=True, blank=True)
 
     def __str__(self):
         return self.name
