@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
 
@@ -8,6 +9,24 @@ from products.models import Product
 from bag.contexts import bag_contents
 
 import stripe
+import json
+
+
+@require_POST
+def cache_checkout_data(request):
+    try:
+        pid = request.POST.get('client_secret').split('_secret')[0]
+        stripe.api_key = settings.STRIPE_SECRET_KEY
+        stripe.PaymentIntent.modify(pid, metadata={
+            'bag': json.dumps(request.session.get('bag', {})),
+            'save_info': request.POST.get('save_info'),
+            'username': request.user,
+        })
+        return HttpResponse(status=200)
+    except Exception as e:
+        messages.error(request, 'Sorry, your payment cannot be \
+            processed right now. Please try again later.')
+        return HttpResponse(content=e, status=400)
 
 
 def checkout(request):
@@ -22,12 +41,11 @@ def checkout(request):
             'email': request.POST['email'],
             'phone_number': request.POST['phone_number'],
             'street_address1': request.POST['street_address1'],
-            'street_address2': request.POST['street_address2'],            
+            'street_address2': request.POST['street_address2'],
             'town_or_city': request.POST['town_or_city'],
-            'postcode': request.POST['postcode'],
             'county': request.POST['county'],
+            'postcode': request.POST['postcode'],
             'country': request.POST['country'],
-            
             
         }
         order_form = OrderForm(form_data)
@@ -44,7 +62,7 @@ def checkout(request):
                         )
                         order_line_item.save()
                     else:
-                        for drink, quantity in item_data['items_by_drink'].items():
+                        for size, quantity in item_data['items_by_drink'].items():
                             order_line_item = OrderLineItem(
                                 order=order,
                                 product=product,
@@ -54,7 +72,7 @@ def checkout(request):
                             order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your basket wasn't found in our database. "
+                        "One of the products in your bag wasn't found in our database. "
                         "Please call us for assistance!")
                     )
                     order.delete()
@@ -68,7 +86,7 @@ def checkout(request):
     else:
         bag = request.session.get('bag', {})
         if not bag:
-            messages.error(request, "There's nothing in your basket at the moment")
+            messages.error(request, "There's nothing in your bag at the moment")
             return redirect(reverse('products'))
 
         current_bag = bag_contents(request)
