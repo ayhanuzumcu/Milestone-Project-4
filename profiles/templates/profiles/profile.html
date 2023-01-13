@@ -36,7 +36,7 @@
                 <p class="text-muted">Order History</p>
                 <div class="order-history table-responsive">
                     <table class="small table table-sm table-borderless">
-                        <thead>
+                        <thead class="thead-dark">
                             <tr>
                                 <th>Order Number</th>
                                 <th>Date</th>
@@ -59,7 +59,7 @@
                                             {% for item in order.lineitems.all %}
                                                 <li>
                                                     {{ item.product.name }} x{{ item.quantity }}{% if item.free_drink %}<br>
-                                                    <span class="small text-muted">Free Drink: {{ item.free_drink|upper }}</span>{% endif %}<br><br>
+                                                    <span class="small text-muted">-Drink: {{ item.free_drink|upper }}</span>{% endif %}
                                                 </li>
                                             {% endfor %}
                                         </ul>
