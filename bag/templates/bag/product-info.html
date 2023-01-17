@@ -1,0 +1,5 @@
+<p class="my-0"><strong>{{ item.product.name }}</strong></p>
+{% if item.product.free_drink %}
+<p class="my-0"><strong>Free Drink: </strong>{{ item.drink|upper }}</p>
+{% endif %}
+<p class="my-0 small text-muted">List Number: {{ item.product.sku|upper }}</p>
