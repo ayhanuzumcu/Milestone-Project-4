@@ -1,8 +1,15 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
-        
+
+        <li class="nav-item d-block d-md-none">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'home' %}" id="home-link">
+                Home
+            </a>
+        </li>
+
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="fish-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="fish-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Fish & Chips
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="fish-link">
@@ -10,12 +17,14 @@
                 <a href="{% url 'products' %}?category=chips" class="dropdown-item">Freshly Cooked Chips</a>
                 <a href="{% url 'products' %}?category=pies" class="dropdown-item">Pies</a>
                 <a href="{% url 'products' %}?category=sausages" class="dropdown-item">Sausages</a>
-                <a href="{% url 'products' %}?category=fish,chips,pies,sausages" class="dropdown-item">All Fish and Chips Menu</a>
+                <a href="{% url 'products' %}?category=fish,chips,pies,sausages" class="dropdown-item">All Fish and
+                    Chips Menu</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="burger-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="burger-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Burgers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="burger-link">
@@ -26,7 +35,8 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="others-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="others-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Others
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="others-link">
@@ -38,19 +48,22 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="meals-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="meals-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Meal Deals
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="meals-link">
                 <a href="{% url 'products' %}?category=fishmeals" class="dropdown-item">Fish and Chips Meals</a>
                 <a href="{% url 'products' %}?category=burgermeals" class="dropdown-item">Burger Meals</a>
                 <a href="{% url 'products' %}?category=kidsmeals" class="dropdown-item">Kids Meals</a>
-                <a href="{% url 'products' %}?category=fishmeals,burgermeals,kidsmeals" class="dropdown-item">All Meal Deals</a>
+                <a href="{% url 'products' %}?category=fishmeals,burgermeals,kidsmeals" class="dropdown-item">All Meal
+                    Deals</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
