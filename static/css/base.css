@@ -327,7 +327,7 @@ a.category-badge > span.badge:hover {
         font-size: .75rem;
     }
 
-    .increment-qty, .decrement-qty {
+    .increments-qty, .decrements-qty {
         padding: .25rem .5rem !important;
     }
 }
