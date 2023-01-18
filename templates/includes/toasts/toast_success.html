@@ -29,20 +29,15 @@
                             {% endif %}
 
                         </div>
-                        <div class="col-3">
+                        <div class="col-6">
                             <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                                 {% if item.product.free_drink %}
                                     <p class="my-0 small">Drink: {{ item.drink|upper }}</p>
                                 {% endif %}
                             <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                            <p class="my-0 small text-muted">Unit Price: £{{ item.product.price }}</p>
                         </div>
-                        <div class="col-3">
-                            {% if item.quantity > 1 %}
-                            <p class="my-0">Unit Price</p>
-                            <p class="my-0">{{ item.product.price }}</p>
-                            {% endif %}
-                                
-                        </div>
+                        
                         <div class="col-3">
                             <p class="">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
                         </div>
