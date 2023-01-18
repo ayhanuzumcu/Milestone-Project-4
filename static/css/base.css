@@ -349,5 +349,6 @@ a.category-badge > span.badge:hover {
 }
 
 .footer-container {
-    padding-bottom: 45px;
+    margin: 15px;
+    text-align: center;
 }
