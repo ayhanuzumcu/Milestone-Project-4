@@ -55,7 +55,7 @@
                         {% with product.free_drink as f %}
                         {% if f %}
                         <div class="col-12">
-                            <p><strong>Choose Free Drink:</strong></p>
+                            <p><strong>Choose Your Drink:</strong></p>
                             <select class="form-control rounded-0 w-50" name="free_drink" id='id_free_drink'>
                                 <option value="cola" selected>Coca Cola</option>
                                 <option value="diet cola">Diet Cola</option>
@@ -102,7 +102,7 @@
                             </a>
                             <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
                         </div>
-                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        <input type="hidden" name="redirect_url" value="{% url 'products' %}">
                         {% endwith %}
                     </div>
                 </form>

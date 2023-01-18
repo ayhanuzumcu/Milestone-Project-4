@@ -1,115 +1,44 @@
 <script type="text/javascript">
 
-    /* 
-     * Disable +/- buttons outside 1-20 range.
-     * If no drink is passed to the function, the parameter will have a value of undefined by default,
-     * which prevents any errors 
-     */
-
-
-    function BasketProcess(BasketItemID,ProcessType)    
-    {
-        var currentValue = parseInt($('#id_qty_' + BasketItemID).val());
-
-        if(ProcessType=="Artir")
-        {
-            if (currentValue>20)
-            {
-                currentValue=20;
-            }
-            else{
-                currentValue=currentValue+1;
-            }
-        }
-        else if(ProcessType="Azalt")
-        {
-
-            if (currentValue<2)
-            {
-                currentValue=1;
-            }
-            else{
-                currentValue=currentValue-1;
-            }
-
-        }
-        $('#id_qty_' + BasketItemID).val(currentValue);
-
-    } 
-
-    //  function handleEnableDisable(itemId, drink) {
-    //     /*
-    //     if (drink) {
-    //         var currentValue = parseInt($(`.drink_${itemId}_${drink}`).val());
-    //     } else {
-    //     */
-    //         var currentValue = parseInt($(`#id_qty_${itemId}`).val());
-    //     //}
-
-    //     var minusDisabled = currentValue < 2;
-    //     var plusDisabled = currentValue > 19;
-
-    //     // if (drink) {
-    //     //     $(`.decrement-drink_${itemId}_${drink}`).prop('disabled', minusDisabled);
-    //     //     $(`.increment-drink_${itemId}_${drink}`).prop('disabled', plusDisabled);
-    //     // } else 
-    //     // &&{
-
-
-
-    //         $(`#decrement-qty_${itemId}`).prop('disabled', minusDisabled);
-    //         $(`#increment-qty_${itemId}`).prop('disabled', plusDisabled);
-    //     // }
-    // }
+    // Disable +/- buttons outside 1-99 range
+    function handleEnableDisable(itemId) {
+        var currentValue = parseInt($(`#id_qty_${itemId}`).val());
+        var minusDisabled = currentValue < 2;
+        var plusDisabled = currentValue > 19;
+        $(`#decrement-qty_${itemId}`).prop('disabled', minusDisabled);
+        $(`#increment-qty_${itemId}`).prop('disabled', plusDisabled);
+    }
 
     // Ensure proper enabling/disabling of all inputs on page load
-    // var allQtyInputs = $('.qty_input');
-    // for (var i = 0; i < allQtyInputs.length; i++) {
-    //     var itemId = $(allQtyInputs[i]).data('item_id');
-    //     var drink = $(allQtyInputs[i]).data('drink');
-    //     handleEnableDisable(itemId, drink);
-    // }
+    var allQtyInputs = $('.qty_input');
+    for(var i = 0; i < allQtyInputs.length; i++){
+        var itemId = $(allQtyInputs[i]).data('item_id');
+        handleEnableDisable(itemId);
+    }
 
-    // // Check enable/disable every time the input is changed
-    // $('.qty_input').change(function () {
-    //     var itemId = $(this).data('item_id');
-    //     var drink = $(this).data('drink');
-    //     handleEnableDisable(itemId, drink);
-    // });
+    // Check enable/disable every time the input is changed
+    $('.qty_input').change(function() {
+        var itemId = $(this).data('item_id');
+        handleEnableDisable(itemId);
+    });
 
-    // // Increment quantity
-    // $('.increment-qty').click(function (e) {
-    //     console.log("increase working")
-    //     e.preventDefault();
-    //     var itemId = $(this).data('item_id');
-    //     var drink = $(this).data('drink');
-    //     var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
-    //     if (drink) {
-    //         var allQuantityInputs = $(`.input-group-${itemId} input[data-drink='${drink}']`);
-    //     } else {
-    //         var allQuantityInputs = $(`.input-group-${itemId} input[name='quantity']`);
-    //     }
-    //     var currentValue = parseInt($(closestInput).val());
-    //     console.log("allqty inputs no drink", currentValue)
-    //     $(closestInput).val(currentValue + 1);
-    //     handleEnableDisable(itemId, drink);
-    // });
+    // Increment quantity
+    $('.increment-qty').click(function(e) {
+       e.preventDefault();
+       var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
+       var currentValue = parseInt($(closestInput).val());
+       $(closestInput).val(currentValue + 1);
+       var itemId = $(this).data('item_id');
+       handleEnableDisable(itemId);
+    });
 
-    // // Decrement quantity
-    // $('.decrement-qty').click(function (e) {
-    //     console.log("decrease working")
-    //     e.preventDefault();
-    //     var itemId = $(this).data('item_id');
-    //     var drink = $(this).data('drink');
-    //     var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
-    //     if (drink) {
-    //         var allQuantityInputs = $(`.input-group-${itemId} input[data-drink='${drink}']`);
-    //     } else {
-    //         var allQuantityInputs = $(`.input-group-${itemId} input[name='quantity']`);
-    //     }
-    //     var currentValue = parseInt($(closestInput).val());
-    //     $(closestInput).val(currentValue - 1);
-    //     handleEnableDisable(itemId, drink);
-    // });
+    // Decrement quantity
+    $('.decrement-qty').click(function(e) {
+       e.preventDefault();
+       var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
+       var currentValue = parseInt($(closestInput).val());
+       $(closestInput).val(currentValue - 1);
+       var itemId = $(this).data('item_id');
+       handleEnableDisable(itemId);
+    });
 </script>
-
