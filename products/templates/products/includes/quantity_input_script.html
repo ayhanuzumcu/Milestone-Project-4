@@ -8,22 +8,28 @@
 
 
      function handleEnableDisable(itemId, drink) {
+        /*
         if (drink) {
             var currentValue = parseInt($(`.drink_${itemId}_${drink}`).val());
         } else {
+        */
             var currentValue = parseInt($(`#id_qty_${itemId}`).val());
-        }
+        //}
 
         var minusDisabled = currentValue < 2;
         var plusDisabled = currentValue > 19;
 
-        if (drink) {
-            $(`.decrement-drink_${itemId}_${drink}`).prop('disabled', minusDisabled);
-            $(`.increment-drink_${itemId}_${drink}`).prop('disabled', plusDisabled);
-        } else {
+        // if (drink) {
+        //     $(`.decrement-drink_${itemId}_${drink}`).prop('disabled', minusDisabled);
+        //     $(`.increment-drink_${itemId}_${drink}`).prop('disabled', plusDisabled);
+        // } else 
+        // &&{
+
+
+
             $(`#decrement-qty_${itemId}`).prop('disabled', minusDisabled);
             $(`#increment-qty_${itemId}`).prop('disabled', plusDisabled);
-        }
+        // }
     }
 
     // Ensure proper enabling/disabling of all inputs on page load
