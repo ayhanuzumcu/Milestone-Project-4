@@ -1,21 +1,24 @@
 <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
     {% csrf_token %}
     <div class="form-group">
-        <div class="input-group">
+
+        <div class="input-group input-group-{{ item.item_id }}">
             <div class="input-group-prepend">
-                <button class="decrement-qty btn btn-sm btn-black rounded-0 decrement-qty_{{ item.item_id }}" data-item_id="{{ item.item_id }}"
-                    id="decrement-qty_{{ item.item_id }}">
+                <button class="decrement-qty btn btn-sm btn-black rounded-0 decrement-qty_{{ item.item_id }} 
+                    {% if item.drink %}decrement-drink_{{ item.item_id }}_{{ item.drink }}{% endif %}"
+                    id="decrement-qty_{{ item.item_id }}" data-item_id="{{ item.item_id }}" data-drink="{{ item.drink }}" aria-label="Decrease Quantity">
                     <span>
                         <i class="fas fa-minus fa-sm"></i>
                     </span>
                 </button>
             </div>
-            <input class="form-control form-control-sm qty_input change-qty id_qty_{{ item.item_id }}" type="number" name="quantity"
-                value="{{ item.quantity }}" min="1" max="20" data-item_id="{{ item.item_id }}"
-                >
+            <input class="form-control form-control-sm qty_input {% if item.drink %}drink_{{ item.item_id }}_{{ item.drink }}{% endif %}" type="number" name="quantity"
+                value="{{ item.quantity }}" min="1" max="20" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}"
+                data-drink="{{ item.drink }}">
             <div class="input-group-append">
-                <button class="increment-qty btn btn-sm btn-black rounded-0 increment-qty_{{ item.item_id }}" data-item_id="{{ item.item_id }}"
-                    >
+                <button class="increment-qty btn btn-sm btn-black rounded-0 increment-qty_{{ item.item_id }} 
+                    {% if item.drink %}increment-drink_{{ item.item_id }}_{{ item.drink }}{% endif %}"
+                    id="increment-qty_{{ item.item_id }}" data-item_id="{{ item.item_id }}" data-drink="{{ item.drink }}" aria-label="Increase quantity">
                     <span>
                         <i class="fas fa-plus fa-sm"></i>
                     </span>
