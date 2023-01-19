@@ -8,10 +8,9 @@ Deliery Address: {{ order.street_address1 }}, {{ order.town_or_city }}, {{ order
 Your Contact Number: {{ order.phone_number }}
 
 Order Details:
-{% for item in order.lineitems.all %}
-{{ item.quantity }} x {{ item.product.name }}{% if item.free_drink %}(Free Drink: {{ item.free_drink|upper }}){% endif %}
---------------------------------
-{% endfor %}
+
+{% for item in order.lineitems.all %}-{{ item.quantity }} x {{ item.product.name }}{% if item.free_drink %}(Free Drink: {{ item.free_drink|upper }}){% endif %}{% endfor %}
+
 Order Total: £{{ order.order_total }}
 Delivery: £{{ order.delivery_cost }}
 Grand Total: £{{ order.grand_total }}
