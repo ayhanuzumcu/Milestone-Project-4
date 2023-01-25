@@ -96,7 +96,7 @@ as well as implementing a fully functional payment system with Stripe.
 
 ### Site Visitor/User Goals ###
 
-- View fish and chips men online
+- View fish and chips menu online
 - Get information about opening hours, contact details and delivery information
 - Ability to order food online
 
@@ -143,9 +143,6 @@ as well as implementing a fully functional payment system with Stripe.
 **Applies to a superuser (site owner):**
 
 - As a user, I am able to securely add, edit and delete the information for the specific food listed on the website.
-
-- As a user, I am able to change the tags on the products to specify new items to promote them.
-
 
 [Back to content](#contents)
 
@@ -201,7 +198,7 @@ You can view all wireframes created for this project in [site wireframes](/wiref
 
 [Shopping Basket](/wireframes/wireframes-site/basket.jpg)
 
-[Checkout](/wireframes/wireframes-site/checkout)
+[Checkout](/wireframes/wireframes-site/checkout.jpg)
 
 [Checkout Success](/wireframes/wireframes-site/checkout-success.jpg)
 
@@ -619,10 +616,10 @@ Instructions to obtain the variables are featured within below sections.
   * *Value: set as **True***
 * AWS_ACCESS_KEY_ID
   * Required for connection to the AWS S3 bucket
-  * *Value: obtained within the downloaded .csv file generated during user creation in AWS (see below section [Create S3 bucket](#Create-S3-bucket)).*
+  * *Value: obtained within the downloaded .csv file generated during user creation in AWS (see below section [Create S3 bucket](#create-S3-bucket)).*
 * AWS_SECRET_ACCESS_KEY
   * Required for connection to the AWS S3 bucket
-  * *Value: obtained within the downloaded .csv file generated during user creation in AWS (see below section [Create S3 bucket](#Create-S3-bucket)).*
+  * *Value: obtained within the downloaded .csv file generated during user creation in AWS (see below section [Create S3 bucket](#create-S3-bucket)).*
 * EMAIL_HOST_PASS
   * Required by Django to send emails using chosen email account
   * *Value: 16 character password provided by, in this instance; Gmail (see below section [Email Setup](#email-setup)).*
@@ -669,7 +666,7 @@ Database migrations will need to be made to the Heroku postgres by following the
 Once all the configuration variables have been added, the deployed app can then be run from Heroku by selecting it and clicking 'open app'. 
 
 ### **Amazon Web Services Setup** ###
-**Create S3 Bucket**
+### **Create S3 Bucket** ###
 * Go to [Amazon Web Services](https://aws.amazon.com/) and set up an account if you do not have one.
 * Once logged in, under ‘my account’ select ‘AWS Management Console’ and search for the service ‘S3’
 * Once in the S3 interface create a new bucket for this project.
