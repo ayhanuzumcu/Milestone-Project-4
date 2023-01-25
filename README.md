@@ -14,63 +14,63 @@ During the pandemic in 2020, most local takeaway shops started delivery. Therefo
   - [Site Visitor/User Goals](#site-visitor-user-goals)
   - [User Stories](#user-stories)
   - [User Requirements and Expectations](#user-requirements-and-expectations)
-    - [**Requirements**](#--requirements--)
-    - [**Expectations**](#--expectations--)
+    - [Requirements](#requirements)
+    - [Expectations](#expectations)
   - [Design Choices](#design-choices)
-    - [**Fonts**](#--fonts--)
-    - [**Colours**](#--colours--)
+    - [Fonts](#fonts)
+    - [Colours](#colours)
 - [Wireframes](#wireframes)
-  - [**Site Layout**](#--site-layout--)
+  - [Site Layout](#site-layout)
 - [Information Architecture](#information-architecture)
   - [Database Choice](#database-choice)
   - [Database Modelling](#database-modelling)
-    - [**Profile App**](#--profile-app--)
+    - [Profile App](#profile-app)
       - [Profile](#profile)
-    - [**Product App**](#--product-app--)
+    - [Product App](#product-app)
       - [Product Category](#product-category)
       - [Products](#products)
-    - [**Checkout App**](#--checkout-app--)
+    - [Checkout App](#checkout-app)
       - [Order](#order)
       - [Order Line](#order-line)
 - [Technologies](#technologies)
   - [Languages](#languages)
-  - [Libraries & Frameworks](#libraries---frameworks)
+  - [Libraries and Frameworks](#libraries-and-frameworks)
   - [Tools](#tools)
 - [Features](#features)
   - [Implemented Features](#implemented-features)
-    - [**User Account**](#--user-account--)
-    - [**Super User**](#--super-user--)
-    - [**Home Page**](#--home-page--)
-    - [**Product Search**](#--product-search--)
-    - [**Products Page**](#--products-page--)
-    - [**Product Details Page**](#--product-details-page--)
-    - [**Shopping Basket Page**](#--shopping-basket-page--)
-    - [**Checkout Page**](#--checkout-page--)
-    - [**Checkout Success Page**](#--checkout-success-page--)
-    - [**User Profile**](#--user-profile--)
+    - [User Account](#user-account)
+    - [Super User](#super-user)
+    - [Home Page](#home-page)
+    - [Product Search](#product-search)
+    - [Products Page](#products-page)
+    - [Product Details Page](#product-details-page)
+    - [Shopping Basket Page](#shopping-basket-page)
+    - [Checkout Page](#checkout-page)
+    - [Checkout Success Page](#checkout-success-page)
+    - [User Profile](#user-profile)
   - [Future Features](#future-features)
 - [Testing](#testing)
   - [Lighthouse](#lighthouse)
-    - [**Home Page Test**](#--home-page-test--)
-    - [**Products Page Test**](#--products-page-test--)
-    - [**Product Details Page Test**](#--product-details-page-test--)
+    - [Home Page Test](#home-page-test)
+    - [Products Page Test](#products-page-test)
+    - [Product Details Page Test](#product-details-page-test)
   - [W3C Validation](#w3c-validation)
   - [User Story Testing](#user-story-testing)
-    - [**Viewing and Navigation**](#--viewing-and-navigation--)
-    - [**Registration and User Accounts**](#--registration-and-user-accounts--)
-    - [**Sorting and Searching**](#--sorting-and-searching--)
-    - [**Admin and Store Management**](#--admin-and-store-management--)
-    - [**Purchasing and Checkout**](#--purchasing-and-checkout--)
+    - [Viewing and Navigation](#viewing-and-navigation)
+    - [Registration and User Accounts](#registration-and-user-accounts)
+    - [Sorting and Searching](#sorting-and-searching)
+    - [Admin and Store Management](#admin-and-store-management)
+    - [Purchasing and Checkout](#purchasing-and-checkout)
 - [Deployment](#deployment)
   - [Running the project locally](#running-the-project-locally)
-    - [**Clone**](#--clone--)
-    - [**Environment Variables**](#--environment-variables--)
+    - [Clone](#clone)
+    - [Environment Variables](#environment-variables)
   - [Heroku Deployment](#heroku-deployment)
-    - [**Heroku Variables**](#--heroku-variables--)
-    - [**Deployment**](#--deployment--)
-    - [**Amazon Web Services Setup**](#--amazon-web-services-setup--)
-    - [**Stripe Setup**](#--stripe-setup--)
-    - [**Email Setup**](#--email-setup--)
+    - [Heroku Variables](#heroku-variables)
+    - [Deployment](#deployment)
+    - [Amazon Web Services Setup](#amazon-web-services-setup)
+    - [Stripe Setup](#stripe-setup)
+    - [Email Setup](#email-setup)
 - [Credits](#credits)
   - [Content](#content)
   - [Media](#media)
@@ -82,7 +82,7 @@ During the pandemic in 2020, most local takeaway shops started delivery. Therefo
 A live demo can be found [here](https://premier-takeaway.herokuapp.com/).
 
 ## UX ##
----
+
 ### Project Goals ###
 
 This project is my final project for the Code Institute's Full stack development programme. The main goal of this project is to create an e-commerce site using Django framework, which is hosted with AWS 
@@ -180,8 +180,6 @@ as well as implementing a fully functional payment system with Stripe.
 
 ## Wireframes ##
 
----
-
 ### **Site Layout** ###
 
 I designed my site moc-ups using [balsamiq wireframes](https://balsamiq.com/). I was focusing on defining the basic layout structure of the app and identifying how displays would change 
@@ -212,8 +210,6 @@ You can view all wireframes created for this project in [site wireframes](/wiref
 ---
 
 ## Information Architecture ##
-
----
 
 ### Database Choice ###
 
@@ -297,8 +293,6 @@ Meal Drink | free_drink | CharField | max_length=20, null=True, blank=True
 
 ## Technologies ##
 
----
-
 ### Languages ###
 
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
@@ -306,7 +300,7 @@ Meal Drink | free_drink | CharField | max_length=20, null=True, blank=True
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [Python](https://www.python.org/)
 
-### Libraries & Frameworks ###
+### Libraries and Frameworks ###
 
 - [Django](https://www.djangoproject.com/)
 - [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)
@@ -328,7 +322,7 @@ Meal Drink | free_drink | CharField | max_length=20, null=True, blank=True
 - [Heroku](https://www.heroku.com/)
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Boto 3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)
-- [AWS bucket](https://aws.amazon.com/s3/)
+- [AWS bucket](https://aws.amazon.com/S3/)
 - [Favicons](https://fontawesome.com/icons?d=gallery)
 - [Balsamiq](https://balsamiq.com/)
 
@@ -337,8 +331,6 @@ Meal Drink | free_drink | CharField | max_length=20, null=True, blank=True
 ---
 
 ## Features ##
-
----
 
 ### Implemented Features ###
 
@@ -430,8 +422,6 @@ Future developments would include:
 
 ## Testing ##
 
----
-
 Testing was done manually throughout the development process. All navigation links have been tested all over the website.
 
 ### **Lighthouse** ###
@@ -459,7 +449,7 @@ You can find the links to the test results here:
 
 [HTML Test Result Link](https://validator.w3.org/nu/?doc=https%3A%2F%2Fpremier-takeaway.herokuapp.com%2F)
 
-[CSS Test Result Link](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fpremier-takeaway.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+[CSS Test Result Link](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fpremier-takeaway.herokuapp.com%2F&profile=csS3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
 You can find the screenshoots here:
 
@@ -527,12 +517,10 @@ All of the below user stories have been tested manually and passed.
 
 ## Deployment ##
 
----
-
 A repository was setup in GitHub using the Code Institute Gitpod full template.  Development was completed using Gitpod and code was regularly pushed back to the GitHub repository.
 The master branch of this repository is the most current version and has been used for the deployed version of the site.
 
-The current live website is hosted as a Heroku app, however the images and static files are hosted on an AWS simple storage service (s3).  Stripe is utilised for the management of financial transactions and Gmail is used for emails.
+The current live website is hosted as a Heroku app, however the images and static files are hosted on an AWS simple storage service (S3).  Stripe is utilised for the management of financial transactions and Gmail is used for emails.
 The instructions in this section cover the process to set up and use these services. 
 
 ### **Running the project locally** ###
@@ -572,11 +560,11 @@ These are listed and described below and instructions to obtain these are featur
   * Required by Django: A random sequence of characters used to maintain security.  
   * *Value: Django secret key.  A good resource is [miniwebtool – django secret key  generator](https://miniwebtool.com/django-secret-key-generator/) and should be different to the same variable in the Heroku app.*
 * STRIPE_PUBLIC_KEY 
-  * *Value: from stripe account (see below section [Stripe Setup](#Stripe-Setup))*
+  * *Value: from stripe account (see below section [Stripe Setup](#stripe-setup))*
 * STRIPE_SECRET_KEY
-  * *Value: from stripe account (see below section [Stripe Setup](#Stripe-Setup))*
+  * *Value: from stripe account (see below section [Stripe Setup](#stripe-setup))*
 * STRIPE_WH_SECRET
-  * *Value: from stripe webhook endpoint (see below section [Create webhook](#Create-new-webhook-end-point)).*  Note that this is different to the one set for Heroku (see below section ?).  
+  * *Value: from stripe webhook endpoint (see below section [Create webhook](#create-new-webhook-end-point)).*  Note that this is different to the one set for Heroku (see below section ?).  
 
 Database migrations will need to be made by following the below commands:
 ```
@@ -619,25 +607,25 @@ Instructions to obtain the variables are featured within below sections.
   * Required by Django: A random sequence of characters used to maintain security.  
   * *Value: Can use Django secret key generator (https://miniwebtool.com/django-secret-key-generator/) and should be different to the same variable in the development environment.*
 * STRIPE_PUBLIC_KEY 
-  * *Value: from stripe account (see below section [Stripe Setup](#Stripe-Setup))*
+  * *Value: from stripe account (see below section [Stripe Setup](#stripe-setup))*
 * STRIPE_SECRET_KEY
-  * *Value: from stripe account (see below section [Stripe Setup](#Stripe-Setup))*
+  * *Value: from stripe account (see below section [Stripe Setup](#stripe-setup))*
 * STRIPE_WH_SECRET
-  * *Value: from stripe webhook endpoint. Note that this is different to the one set for the development environment (see below section [Create webhook](#Create-new-webhook-end-point)).*  
+  * *Value: from stripe webhook endpoint. Note that this is different to the one set for the development environment (see below section [Create webhook](#create-new-webhook-end-point)).*  
 * DATABASE_URL
   * *Value: automatically setup during Heroku deployment (can be obtained by viewing your Postgres database within the Heroku dashboard, under Settings Database Credentials).*
 * USE_AWS
   * Required so that the deployed app uses AWS for images and static files.
   * *Value: set as **True***
 * AWS_ACCESS_KEY_ID
-  * Required for connection to the AWS s3 bucket
-  * *Value: obtained within the downloaded .csv file generated during user creation in AWS (see below section [Create s3 bucket](#Create-s3-bucket)).*
+  * Required for connection to the AWS S3 bucket
+  * *Value: obtained within the downloaded .csv file generated during user creation in AWS (see below section [Create S3 bucket](#Create-S3-bucket)).*
 * AWS_SECRET_ACCESS_KEY
-  * Required for connection to the AWS s3 bucket
-  * *Value: obtained within the downloaded .csv file generated during user creation in AWS (see below section [Create s3 bucket](#Create-s3-bucket)).*
+  * Required for connection to the AWS S3 bucket
+  * *Value: obtained within the downloaded .csv file generated during user creation in AWS (see below section [Create S3 bucket](#Create-S3-bucket)).*
 * EMAIL_HOST_PASS
   * Required by Django to send emails using chosen email account
-  * *Value: 16 character password provided by, in this instance; Gmail (see below section [Email Setup](#Email-Setup)).*
+  * *Value: 16 character password provided by, in this instance; Gmail (see below section [Email Setup](#email-setup)).*
 * EMAIL_HOST_USER
   * Required by Django to send emails using chosen email account
   * *Value: the email address of chosen email account (e.g. `john.smith@gmail.com`)*
@@ -683,8 +671,8 @@ Once all the configuration variables have been added, the deployed app can then 
 ### **Amazon Web Services Setup** ###
 Create S3 Bucket
 * Go to [Amazon Web Services](https://aws.amazon.com/) and set up an account if you do not have one.
-* Once logged in, under ‘my account’ select ‘AWS Management Console’ and search for the service ‘s3’
-* Once in the s3 interface create a new bucket for this project.
+* Once logged in, under ‘my account’ select ‘AWS Management Console’ and search for the service ‘S3’
+* Once in the S3 interface create a new bucket for this project.
 * Name the bucket and select a region closest to you.
 * Uncheck block all public access and acknowledge that the bucket will be public.
 * Select ‘create bucket’ to finish and the bucket will be created.
@@ -692,7 +680,7 @@ Create S3 Bucket
 * Ensure that ‘host a static website’ is selected and enter a default value for index as this will not be used for this project deployment.
 * Click save.
 * Next click permissions tab and select to edit the CORS 
-* Enter and save the below cors configuration which will set up the required access between the Heroku app and this s3 bucket.
+* Enter and save the below cors configuration which will set up the required access between the Heroku app and this S3 bucket.
 ```
 [
   {
@@ -725,8 +713,8 @@ Create Group and Policy
 * Name a new group and click ‘create group’.
 * Click ‘policies’ so as to create a policy used to access the new bucket.
 * Click ‘create policy’ and then select the ‘JSON’ tab and select ‘import managed policy’.
-* Within the search input, search for s3 and then select to import the Amazon s3 full access policy.  
-* Modify the policy by entering the ARN from the bucket policy in s3 as the value for resource.
+* Within the search input, search for S3 and then select to import the Amazon S3 full access policy.  
+* Modify the policy by entering the ARN from the bucket policy in S3 as the value for resource.
 * Click ‘Next: Tags’ and then click ‘Next: Review’
 * Provide a name and description for the policy and click ‘Create policy’.
 
@@ -746,28 +734,28 @@ Create User and add to group
 
 Connect Django to AWS S3 bucket
 
-Within the Django app settings python file enter the name and region name for the AWS s3 bucket that you have set up.
+Within the Django app settings python file enter the name and region name for the AWS S3 bucket that you have set up.
 
 Within Heroku add the AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY to the config variables and also add a USE_AWS key and set it to true.  The access key and secret key are contained with the **downloaded csv file**.
 
-Once that is done, git add, commit and push the changes which will trigger a deployment to Heroku.  Check the Heroku build log to check that the static files were collected and there should be a 'static' folder within the s3 bucket. 
+Once that is done, git add, commit and push the changes which will trigger a deployment to Heroku.  Check the Heroku build log to check that the static files were collected and there should be a 'static' folder within the S3 bucket. 
  
 Add media files to S3 bucket
 
-The below instructions detail how to do this within the s3 management interface.
+The below instructions detail how to do this within the S3 management interface.
 
 * Within the S3 bucket overview click create folder and call it media.
 * Inside that folder click on ‘upload’ and then ‘add files’
 * Select all of the product images (found within the repo download performed earlier) and click open
 * Click next and then under permissions, check the box for ‘grant public-read access’.
 * Then click upload.
-* There should now be a 'media' folder within the s3 bucket containing the images. 
+* There should now be a 'media' folder within the S3 bucket containing the images. 
 
 ### **Stripe Setup** ###
 * Create a [Stripe](https://stripe.com) account or log in to existing.
 * On the Stripe dashboard, under ‘Developers’ copy the ‘test API key’ and ‘ Secret key’.  Use these as the values for the environment and Heroku variables STRIPE_PUBLIC_KEY and STRIPE_SECRET_KEY as detailed above. 
 
-Create new webhook end point
+#### Create new webhook end point ####
 
 **NOTE:** Two separate webhooks will need to be setup. One for the development environment and one for the Heroku app.
 * Run the application to get the address of the site.  Copy this and go to the Stripe dashboard.
@@ -801,6 +789,8 @@ Within the Heroku Config variables add the 16 character password as the value to
 
 [Back to content](#contents)
 
+---
+
 ## Credits ##
 
 ### Content ###
@@ -816,4 +806,6 @@ Within the Heroku Config variables add the 16 character password as the value to
     - [Freepik](https://www.freepik.com/)
     - [Shutterstock](https://www.shutterstock.com/) (paid for images)
     - [Dreamstime](https://www.dreamstime.com/)  (paid for images)
+
+---
 
