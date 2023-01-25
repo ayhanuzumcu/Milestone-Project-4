@@ -20,8 +20,7 @@ class UserProfileForm(forms.ModelForm):
             'default_town_or_city': 'Town or City',
             'default_county': 'County, State or Locality',
             'default_postcode': 'Postal Code',
-            
-        }
+            }
 
         self.fields['default_phone_number'].widget.attrs['autofocus'] = True
         for field in self.fields:
