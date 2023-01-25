@@ -669,7 +669,7 @@ Database migrations will need to be made to the Heroku postgres by following the
 Once all the configuration variables have been added, the deployed app can then be run from Heroku by selecting it and clicking 'open app'. 
 
 ### **Amazon Web Services Setup** ###
-Create S3 Bucket
+**Create S3 Bucket**
 * Go to [Amazon Web Services](https://aws.amazon.com/) and set up an account if you do not have one.
 * Once logged in, under ‘my account’ select ‘AWS Management Console’ and search for the service ‘S3’
 * Once in the S3 interface create a new bucket for this project.
@@ -708,7 +708,7 @@ Create S3 Bucket
 * Next select to edit the Access control list and set the list objects permission for everyone under the Public Access section as below:  
  
 ### **Create access policy, group and user** ###
-Create Group and Policy
+**Create Group and Policy**
 * Within the AWS services menu open Iam (Identity and Access Management) and in the left hand menu click ‘User groups’ to create a new group.
 * Name a new group and click ‘create group’.
 * Click ‘policies’ so as to create a policy used to access the new bucket.
@@ -718,21 +718,21 @@ Create Group and Policy
 * Click ‘Next: Tags’ and then click ‘Next: Review’
 * Provide a name and description for the policy and click ‘Create policy’.
 
-Attach policy to group
+**Attach policy to group**
 
 * Within the AWS services menu open Iam and in the left hand menu click ‘User groups’ to view the newly created group.
 * Select the new group and click on the permissions tab
 * Click the ‘Add permissions’ button and select ‘Attach Policies’ from the drop down.
 * Select the policy that was just created, by checking the tick box and click on ‘Add permissions’
  
-Create User and add to group
+**Create User and add to group**
 
 * Within the AWS services menu open Iam and in the left hand menu click ‘Users’ and then select ‘Add users’
 * Provide a name for the user, check the tick box to grant the user access and select next.
 * Check the tick box next to the group just created to add the user to the group.  Click through the next few pages to create user.
 * **!IMPORTANT:** On the success page, click 'Download .csv file' which contains the user access key and secret access key needed to authenticate them from the Django app.
 
-Connect Django to AWS S3 bucket
+**Connect Django to AWS S3 bucket**
 
 Within the Django app settings python file enter the name and region name for the AWS S3 bucket that you have set up.
 
@@ -740,7 +740,7 @@ Within Heroku add the AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY to the config 
 
 Once that is done, git add, commit and push the changes which will trigger a deployment to Heroku.  Check the Heroku build log to check that the static files were collected and there should be a 'static' folder within the S3 bucket. 
  
-Add media files to S3 bucket
+**Add media files to S3 bucket**
 
 The below instructions detail how to do this within the S3 management interface.
 
@@ -783,7 +783,7 @@ The below instructions cover the setup using a [Gmail](https://google.com) accou
 * In this, on the App passwords screen, select from the dropdowns; ‘mail’ for app and ‘other’ for device.  Add an appropriate name and click ‘generate’.
 You will then be given a 16 character password which you will need to copy.
 
-In Heroku
+**In Heroku**
 
 Within the Heroku Config variables add the 16 character password as the value to the variable ‘EMAIL_HOST_PASS’.  Add another variable called ‘EMAIL_HOST_USER’ and set the value as the gmail account email used.
 
