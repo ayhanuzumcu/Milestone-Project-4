@@ -61,6 +61,7 @@ During the pandemic in 2020, most local takeaway shops started delivery. Therefo
     - [Sorting and Searching](#sorting-and-searching)
     - [Admin and Store Management](#admin-and-store-management)
     - [Purchasing and Checkout](#purchasing-and-checkout)
+  - [Unit Testing](#unit-testing)
 - [Deployment](#deployment)
   - [Running the project locally](#running-the-project-locally)
     - [Clone](#clone)
@@ -501,12 +502,110 @@ All of the below user stories have been tested manually and passed.
 | 20  | Customer   | Receive confirmation email after checking out                     | To keep my own record of the purchase                                                 | Pass |
 
 #### **Admin and Store Management** ####
-| ID  | As A    | I want to...                                                      | So I can...                                                                           | Pass |
+| ID  | As A       | I want to...                                                      | So I can...                                                                           | Pass |
 | --- | ---------- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------------- | --- |
 |     |            | **_Admin and Store Management_**                                  |                                                                                       |
 | 21  | Staff      | Add a product                                                     | Add new products to my store                                                          | Pass |
 | 22  | Staff      | Edit/update a product                                             | Change the price, description, images etc of a product                                | Pass |
 | 23  | Staff      | Delete a product                                                  | Remove items that aren't for sale anymore                                             | Pass |
+
+### **Unit Testing** ###
+
+Django Testing
+Automated Unit Testing was done using Django’s testing tools by importing the inbuild TestCase class from Django. Below is an overview report for testing forms, views and models for each app. The reports are generated when I installed coverage in the terminal using the commands: -
+
+- pip3 install coverage
+- coverage run --source=[APP NAME] manage.py test
+View Reports in browser
+
+- coverage report
+- coverage html
+- python3 -m http.server
+
+gitpod /workspace/Milestone-Project-4 (main) $ coverage report
+
+|Name                                             | Stmts |  Miss |Cover|
+|-------------------------------------------------|-------|-------|-----|
+|bag/__init__.py                                  |     0   |   0 | 100%|
+|bag/admin.py                                     |     1   |   0 | 100%|
+|bag/apps.py                                      |     4   |   0 | 100%|
+|bag/contexts.py                                  |    27   |  23 |  15%|
+|bag/migrations/__init__.py                        |    0   |   0 | 100%|
+|bag/models.py                                     |    1   |  0  | 100%|
+|bag/ponicode/__init__.py                          |    0   |   0 | 100%|
+|bag/ponicode/contexts_test.py                     |   10   | 10  |   0%|
+|bag/templatetags/__init__.py                      |    0   |   0 | 100%|
+|bag/templatetags/bag_tools.py                     |    5   |   1 |  80%|
+|bag/tests.py                                      |    1   |   0 | 100%|
+|bag/urls.py                                       |    3   |   0 | 100%|
+|bag/views.py                                      |   70   |  63 |  10%|
+|checkout/__init__.py                              |    1   |   0 | 100%|
+|checkout/admin.py                                 |   12   |   0 | 100%|
+|checkout/apps.py                                  |    5   |   0 | 100%|
+|checkout/forms.py                                 |   18   |  11 |  39%|
+|checkout/migrations/0001_initial.py               |    6   |   6 |   0%|
+|checkout/migrations/0002_auto_20230111_2227.py    |    4   |   4 |   0%|
+|checkout/migrations/0003_alter_order_country.py   |    5   |   5 |   0%|
+|checkout/migrations/0004_order_user_profile.py    |    5   |   5 |   0%|
+|checkout/migrations/__init__.py                   |    0   |   0 | 100%|
+|checkout/models.py                                |   51   |  14 |  73%|
+|checkout/signals.py                               |    9   |   2 |  78%|
+|checkout/tests.py                                 |    1   |   0 | 100%|
+|checkout/urls.py                                  |    4   |   0 | 100%|
+|checkout/views.py                                 |   90   |  74 |  18%|
+|checkout/webhook_handler.py                       |   77   |  61 |  21%|
+|checkout/webhooks.py                              |   28   |  19 |  32%|
+|custom_storages.py                                |    6   |   6 |   0%|
+|home/__init__.py                                  |    0   |   0 | 100%|
+|home/admin.py                                     |    1   |   0 | 100%|
+|home/apps.py                                      |    4   |   0 | 100%|
+|home/migrations/__init__.py                       |    0   |   0 | 100%|
+|home/models.py                                    |    1   |   0 | 100%|
+|home/tests.py                                     |    1   |   0 | 100%|
+|home/urls.py                                      |    4   |   0 | 100%|
+|home/views.py                                     |    3   |   1 |  67%|
+|info/__init__.py                                  |    0   |   0 | 100%|
+|info/admin.py                                     |    1   |   0 | 100%|
+|info/apps.py                                      |    4   |   0 | 100%|
+|info/migrations/__init__.py                       |    0   |   0 | 100%|
+|info/models.py                                    |    1   |   0 | 100%|
+|info/tests.py                                     |    1   |   0 | 100%|
+|info/urls.py                                      |    3   |   0 | 100%|
+|info/views.py                                     |    7   |   3 |  57%|
+|manage.py                                         |   12   |   2 |  83%|
+|premier/__init__.py                               |    0   |   0 | 100%|
+|premier/asgi.py                                   |    4   |  4  |   0%|
+|premier/settings.py                               |   67   |  16 |  76%|
+|premier/urls.py                                   |    5   |   0 | 100%|
+|premier/wsgi.py                                   |    4   |   4 |   0%|
+|products/__init__.py                              |    0   |   0 | 100%|
+|products/admin.py                                 |   10   |   0 | 100%|
+|products/apps.py                                  |    4   |   0 | 100%|
+|products/forms.py                                 |   15   |   6 |  60%|
+|products/migrations/0001_initial.py               |    6   |   6 |   0%|
+|products/migrations/0002_auto_20230109_2059.py    |    4   |   4 |   0%|
+|products/migrations/__init__.py                   |    0   |   0 | 100%|
+|products/models.py                                |   21   |   3 |  86%|
+|products/tests.py                                 |    1   |   0 | 100%|
+|products/urls.py                                  |    3   |   0 | 100%|
+|products/views.py                                 |   88   |  73 |  17%|
+|products/widgets.py                               |    7   |   0 | 100%|
+|profiles/__init__.py                              |    0   |   0 | 100%|
+|profiles/admin.py                                 |    1   |   0 | 100%|
+|profiles/apps.py                                  |    4   |   0 | 100%|
+|profiles/forms.py                                 |   18   |  11 |  39%|
+|profiles/migrations/0001_initial.py               |    8   |   8 |   0%|
+|profiles/migrations/__init__.py                   |    0   |   0 | 100%|
+|profiles/models.py                                |   21   |  4  |  81%|
+|profiles/ponicode/__init__.py                     |    0   |   0 | 100%|
+|profiles/ponicode/views_test.py                   |   10   |  10 |   0%|
+|profiles/tests.py                                 |    1   |   0 | 100%|
+|profiles/urls.py                                  |    3   |   0 | 100%|
+|profiles/views.py                                 |   26   |  17 |  35%|
+|--------------------------------------------------|--------|-----|-----|
+|TOTAL                                              | 818  |  476   | 42%|
+
+With more time available, I would continue with auto testing to improve on these scores and look to get all apps as close to 100% as possible.
 
 [Back to content](#contents)
 
